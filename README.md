@@ -1,6 +1,6 @@
 # IIIT-D Administration System
 
-This project implements a simple administration system for IIIT-Delhi, allowing users to search for and display information about various faculty members and staff.
+This project implements a simple administration system for IIIT-Delhi, allowing users to search for and display information about various Department Officers  and staff.
 
 ## Features
 
