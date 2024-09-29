@@ -6,8 +6,8 @@ CXXFLAGS = -std=c++17 -Wall
 
 SRC = code.cpp
 
-DEBUG_BIN = second_debug
-RELEASE_BIN = second_release
+DEBUG_BIN = third_debug
+RELEASE_BIN = third_release
 
 debug: CXXFLAGS += -g
 debug: $(DEBUG_BIN)
