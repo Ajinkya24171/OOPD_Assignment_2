@@ -1,11 +1,14 @@
-# IIIT-D Administration System
+# IIIT-D Faculty Search System
 
-This project implements a simple administration system for IIIT-Delhi, allowing users to search for and display information about various Department Officers  and staff.
+This project implements a faculty search system for IIIT-Delhi, allowing users to search for and display information about faculty members across different departments.
 
 ## Features
 
-- Supports partial name matching for easier searching
+- Search for faculty members, HODs, and administrative staff by name
+- Display detailed information about each person, including their name, phone number, room number, and designation
+- Supports partial and case-insensitive name matching for easier searching
 - Implements a class hierarchy to represent different roles within the institution
+- Includes data for six departments: ECE, CSE, CSB, CSD, CSAM, and CSSS
 
 ## Requirements
 
@@ -22,7 +25,7 @@ To compile the debug version:
 make debug
 ```
 
-This will create an executable named `first_debug`.
+This will create an executable named `Second_debug`.
 
 To compile the release version:
 
@@ -30,7 +33,7 @@ To compile the release version:
 make release
 ```
 
-This will create an executable named `first_release`.
+This will create an executable named `Second_release`.
 
 To clean up the build files:
 
@@ -44,33 +47,32 @@ After compiling, run the program:
 
 For debug version:
 ```
-./first_debug
+./second_debug
 ```
 
 For release version:
 ```
-./first_release
+./second_release
 ```
 
 Follow the on-screen prompts to search for a person or exit the program.
 
 ## Project Structure
 
-- `first.cpp`: Main source file containing all the classes and program logic
+- `code.cpp`: Main source file containing all the classes and program logic
 - `Makefile`: Build script for compiling the project
 - `README.md`: This file, containing project information and instructions
 
 ## Classes
 
-- `Person`: Base class for all individuals in the system
-- `Dean`, `AssociateDean`, `Library`: Derived classes representing specific roles
-- `Department`: Represents a department and manages its members
-- `Administration`: Main class that initializes the system and handles searches
+- `Person`: Represents an individual with their details
+- `Department`: Represents a department and manages its members (HOD, Admin Officer, and Faculty)
+- `Administration`: Main class that initializes the system and handles searches across all departments
 
 ## Notes
 
-- The system is pre-populated with some sample data for demonstration purposes
+- The system is pre-populated with sample data for six departments
+- Each department has one HOD, one Administrative Officer, and five faculty members
 - The search function supports partial, case-insensitive name matching
-- There's a limit of 10 members per department (defined by `MAX_MEMBERS`)
-- The system includes 7 pre-defined departments
+- Input validation is implemented to handle invalid user inputs
 
