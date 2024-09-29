@@ -4,10 +4,10 @@ CXX = g++
 
 CXXFLAGS = -std=c++17 -Wall
 
-SRC = first.cpp
+SRC = code.cpp
 
-DEBUG_BIN = first_debug
-RELEASE_BIN = first_release
+DEBUG_BIN = code_debug
+RELEASE_BIN = code_release
 
 debug: CXXFLAGS += -g
 debug: $(DEBUG_BIN)
