@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>  // For random number generation
-#include <ctime>    // For seeding the random number generator
+#include <cstdlib> 
+#include <ctime>    
 using namespace std;
 
 class Person {
@@ -68,7 +68,7 @@ public:
     // Escalate in Academic Department
     void escalateAcademic() {
         if (dynamic_cast<Faculty*>(currentHandler)) {
-            currentHandler = new HOD("HOD: Sambuddho Chakravarty");
+            currentHandler = new HOD("HOD: Dr. A V Subramanyam");
         } else if (dynamic_cast<HOD*>(currentHandler)) {
             currentHandler = new AdminOfficer("Admin Officer: Ashutosh Brahma");
         }
@@ -153,12 +153,14 @@ int main() {
         int complaintID = generateComplaintID();
         cout << "Your complaint has been registered with ID: " << complaintID << endl;
 
+        // Initialize handler to nullptr
+        Person* handler = nullptr;
+
         // Create initial handler based on the department
-        Person* handler;
         if (department == "Administrative") {
             handler = new AssociateDean("Associate Dean: Debarka Sengupta");
         } else if (department == "Academic") {
-            handler = new Faculty("Faculty: Dr. Arani Sir");
+            handler = new Faculty("Faculty: Dr. Anuj Grover Sir");
         }
 
         // Create a complaint object
@@ -183,12 +185,14 @@ int main() {
             return 1;
         }
 
+        // Initialize handler to nullptr
+        Person* handler = nullptr;
+
         // For simplicity, using a pre-created handler and complaint (normally would retrieve from a database)
-        Person* handler;
         if (department == "Administrative") {
             handler = new AssociateDean("Associate Dean: Debarka Sengupta");
         } else if (department == "Academic") {
-            handler = new Faculty("Faculty: Dr. Arani Sir");
+            handler = new Faculty("Faculty: Dr. Anuj Grover  Sir");
         }
 
         // Example complaint, the actual code would retrieve the complaint using the ID
