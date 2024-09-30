@@ -1,13 +1,11 @@
-#makefile
-
 CXX = g++
 
 CXXFLAGS = -std=c++17 -Wall
 
-SRC = code.cpp
+SRC = main.cpp Library.cpp LibraryItem.cpp Book.cpp Journals.cpp PublicationRank.cpp User.cpp classFunctions.cpp functions.cpp
 
-DEBUG_BIN = third_debug
-RELEASE_BIN = third_release
+DEBUG_BIN = library_debug
+RELEASE_BIN = library_release
 
 debug: CXXFLAGS += -g
 debug: $(DEBUG_BIN)
