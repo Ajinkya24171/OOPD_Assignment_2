@@ -1,6 +1,8 @@
+#ifndef LIBRARYITEM_H
+#define LIBRARYITEM_H
 
-#ifndef LIBRARY_ITEM_H
-#define LIBRARY_ITEM_H
+
+
 
 #include <iostream>
 #include <fstream>
@@ -13,15 +15,16 @@
 #include <chrono>
 #include <thread>
 #include <iomanip>
-
-// int ID=1;
-// const int MAX_ITEMS = 500; // Maximum number of items in the library
-
-class LibraryItem
-{
+using namespace std;
+extern int ID;
+const int MAX_ITEMS=500;
+class LibraryItem {
 public:
+    // Pure virtual function to print details of the item
     virtual void printDetails() const = 0;
+
+    // Virtual destructor for proper cleanup of derived classes
     virtual ~LibraryItem() {}
 };
 
-#endif // LIBRARY_ITEM_H
+#endif

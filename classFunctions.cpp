@@ -1,8 +1,8 @@
 
-#include "Library.cpp"
+#include "classFunction.h"
 
 
-void Library ::searchBooksByAuthor(const string &bookAuthor, Book *matchingBooks[], int &matchingCount)
+void Library::searchBooksByAuthor(const string &bookAuthor, Book *matchingBooks[], int &matchingCount)
 {
     matchingCount = 0;
 

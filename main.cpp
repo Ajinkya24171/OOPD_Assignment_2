@@ -11,15 +11,16 @@
 #include <thread>
 #include <iomanip>
 using namespace std;
-
-#include "Library.cpp"
 #include "functions.h"
+#include "classFunction.h"
+
+
 
 
 int main()
 {
     Library library;
-    int ID = 1;
+     int ID = 1;
 
     // Opening journal.csv
     ifstream journalFile("journals.csv");

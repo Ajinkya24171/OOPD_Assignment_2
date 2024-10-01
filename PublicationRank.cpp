@@ -1,47 +1,45 @@
-#include<iostream>
-#include "LibraryItem.h"
-using namespace std;
+#include "PublicationRank.h"
 
-class PublicationRank : public LibraryItem
+// Constructor
+PublicationRank::PublicationRank(int ID, const string &publication, int rank, double totalPaid)
+    : ID(ID), publication(publication), rank(rank), totalPaid(totalPaid), borrowed(false)
 {
-private:
-    int ID=1;
-    string publication;
-    int rank;
-    double totalPaid;
-    bool borrowed;
+}
 
-public:
-    // Constructor
-    PublicationRank(int ID, const string &publication, int rank, double totalPaid)
-        : ID(ID), publication(publication), rank(rank), totalPaid(totalPaid) {}
+// Getter functions
+int PublicationRank::getID() const
+{
+    return ID;
+}
 
-    int getID() const
-    {
-        return ID;
-    }
-    string getPublication() const
-    {
-        return publication;
-    }
-    int getrank() const
-    {
-        return rank;
-    }
-    double gettotalPaid() const
-    {
-        return totalPaid;
-    }
-    bool isBorrowed() const
-    {
-        return borrowed;
-    }
-    void setBorrowed(bool status)
-    {
-        borrowed = status;
-    }
-    void printDetails() const override
-    {
-        cout << "ID: " << ID << "\nPublication Name: " << publication << "\nRank: " << rank << "\nTotal Paid: " << totalPaid << "\n";
-    }
-};
+string PublicationRank::getPublication() const
+{
+    return publication;
+}
+
+int PublicationRank::getrank() const
+{
+    return rank;
+}
+
+double PublicationRank::gettotalPaid() const
+{
+    return totalPaid;
+}
+
+bool PublicationRank::isBorrowed() const
+{
+    return borrowed;
+}
+
+// Setter function
+void PublicationRank::setBorrowed(bool status)
+{
+    borrowed = status;
+}
+
+// Print details
+void PublicationRank::printDetails() const
+{
+    cout << "ID: " << ID << "\nPublication Name: " << publication << "\nRank: " << rank << "\nTotal Paid: " << totalPaid << "\n";
+}

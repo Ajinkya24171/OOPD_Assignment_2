@@ -1,27 +1,32 @@
+#ifndef FUNCTION_H
+#define FUNCTION_H
 
-#ifndef FUNCTIONS_H
-#define FUNCTIONS_H
+#include <iostream>      // For input/output operations (e.g., std::cout)
+#include <string>        // For std::string
+#include <sstream>       // For std::stringstream and std::istringstream
+#include <cctype>        // For std::isdigit, std::isalpha
+#include <iomanip>  
 
-#include <string>
-#include <sstream>
-#include <cctype>
+using namespace std;
+
+// Function Declarations
 
 // Function to check if a string is numeric
-bool isNumeric(const std::string &str);
+bool isNumeric(const string& str);
 
 // Function to split a CSV line into fields based on commas
-void splitCSVLine(const std::string &line, std::string fields[], int fieldCount);
+void splitCSVLine(const string& line, string fields[], int fieldCount);
 
-// Function to split a line into fields based on newlines
-void splitLine(const std::string &line, std::string fields[], int fieldCount);
+// Function to split a line into fields
+void splitLine(const string& line, string fields[], int fieldCount);
 
 // Function to split a string into fields based on commas
-void splitString(const std::string &input, std::string fields[], int fieldCount);
+void splitString(const string& input, string fields[], int fieldCount);
 
-// Function to validate a username
-bool isValidUserName(const std::string &userName);
+// Function to validate a user name
+bool isValidUserName(const string& userName);
 
-// Function to get a specific field from a CSV line
-std::string getField(const std::string& line, int fieldIndex);
+// Function to get a specific field from a CSV line by index
+string getField(const string& line, int fieldIndex);
 
-#endif //FUNCTIONS_H
+#endif // FUNCTION_H
